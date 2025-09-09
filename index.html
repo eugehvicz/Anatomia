@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anatomia</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Anatomia de uma página html 5</h1>
+      <nav>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#midia">Mídia</a>
+        <a href="#dados">Dados</a>
+        <a href="#texto">Texto</a>
+        <a href="#interatividade">Interatividade</a>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="card">
+        <h2>Uma página que explica a si mesma</h2>
+        <p>
+          Bem-vindos! Esta página foi construida como um exemplo pratico do uso
+          de tags semânticas do HTML5. Cada seção que você vê abaixo não apenas
+          utiliza as tags, mas também explica o porquê de seu uso. Inspecione o
+          código para ver a mágica acontecer!
+        </p>
+      </div>
+
+      <section id="estrutura">
+        <h3>EStrutura Semântica</h3>
+        <div class="card tag-highlight">
+          <p>
+            Pense nas tags de estrutura como as caixas transparentes de um
+            mímico. Elas existem, definem espaços e organizam a cena, mas são
+            invisíveis para o público. Elas não mudam o visual sozinhas, mas
+            informam ao navegador o papel de cada bloco, melhorando a
+            acessibilidade e o SEO.
+          </p>
+          <p>
+            Tags como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+            <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>,
+            <code>&lt;aside&gt;</code> e <code>&lt;footer&gt;</code> formam o
+            esqueleto da página.
+          </p>
+          <div class="diagram-layout">
+            <header class="diagram-header">
+              <code>&lt;header&gt;</code>(Cabeçalho)
+            </header>
+            <div class="diagram-content">
+              <article>
+                <h4><code>&lt;article&gt;</code></h4>
+                <p>
+                  Este é o conteúdo principal e autônomo. Poderia ser lido
+                  separadamente e ainda faria sentido. Por exemplo, a matéria de
+                  um jornal.
+                </p>
+              </article>
+
+              <aside>
+                <h4><code>&lt;aside&gt;</code></h4>
+                <p>
+                  sto é um conteúdo lateral. Relacionado ao
+                  <code>&lt;article&gt;</code>, mas não faz parte do fluxo
+                  principal. Pense em uma caixa de "leia também".
+                </p>
+              </aside> </div>
+              <footer class="diagram-footer">
+                code>&lt;footer&gt;</code>(Rodapé)
+              </footer>
+          </div>
+        </div>
+      </section>
+
+      <section id="midia">
+        <h3>Agrupando Mídias e Legendas</h3>
+        <div class="card grid-container">
+            <figure>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="https://placehold.co/600x400/3b82f6/ffffff?text=Imagem+para+Desktop">
+                    <img src="https://placehold.co/400x500/000000/ffffff?text=Imagem+para+Mobile" alt="Exemplo de imagem responsiva">
+                </picture>
+                <figcaption>
+                    
+                </figcaption>
+            </figure>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
