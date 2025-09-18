@@ -29,7 +29,7 @@
 
       <section id="formulario">
         <h3>Formulário Interativos: Coletando Dados</h3>
-        <div class="card tag-highlight">
+        <div class="card principal">
           <form action="">
             <fieldset>
               <legend>Informações Pessoais</legend>
@@ -89,7 +89,23 @@
                   <input type="checkbox">
                   <label for="">React</label>  
             </fieldset>
+            <fieldset>
+              <legend>Feedback</legend>
+          <div class="form-group">
+            <label for="satisfacao" class="form-label"> Nivel de Satisfação(0 a 100):</label>
+            <input type="range" id="satisfacao" name="satisfacao" min="0" max="100" value="75" class="form-input" oninput="resultado.value=parseInt(satisfacao.value)">
+            <div class="range-output">
+             <output name="resultado" for="satisfacao" >75</output>
+          </div>
+          </div>
+          <div>
+            <label for="mensagem" class="form-label">Deixe seu comentário:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="form-textarea"></textarea>
+          </div>
+            </fieldset>
+            <button type="submit" class="btn-submit">Enviar inscrição</button>
           </form>
+
           <aside>
             <p><p>O formulário agora combina múltiplos elementos: <code>&lt;datalist&gt;</code> para autocompletar, e <code>&lt;select&gt;</code> para uma lista fechada de opções.</p>
             <p>Para escolhas, usamos <code>&lt;input type="radio"&gt;</code> (escolha única) e <code>&lt;input type="checkbox"&gt;</code> (múltipla escolha).</p>
@@ -98,6 +114,50 @@
           </aside>
         </div>
       </section>
+       <section id="texto-avancado">
+            <h3 class="section-title">Semântica de Texto Específica</h3>
+            <div class="card tag-highlight">
+                <div class="text-content">
+                    <p>
+                        Nesta seção, exploramos como dar mais significado a palavras específicas. Por exemplo, 
+                        <dfn>HTML5</dfn> é a quinta versão da 
+                        <abbr title="HyperText Markup Language">HTML</abbr>.
+                        Ela foi oficialmente lançada em <time datetime="2014-10-28">28 de outubro de 2014</time>.
+                        Uma de suas principais novidades foi 
+                        <mark>a introdução de tags semânticas</mark>
+                        , que revolucionaram a forma como estruturamos documentos para a web.
+                    </p>
+    
+                    <div class="divider">
+                         <p>
+                            Para contextos científicos ou matemáticos, usamos <code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>. Por exemplo, a fórmula da água é H<sub>2</sub>O e 2<sup>10</sup> é 1024.
+                        </p>
+                    </div>
+    
+                    <div class="divider">
+                        <p>
+                            Para conteúdo técnico, temos um trio poderoso. Para salvar um arquivo, digite <kbd>Ctrl</kbd> + <kbd>S</kbd>.
+                            O comando a seguir, <code>git commit</code>, é essencial.
+                        </p>
+                        <p>Para blocos de código maiores, combinamos <code>&lt;pre&gt;</code> com <code>&lt;code&gt;</code>:</p>
+                        <pre><code class="language-js">function helloWorld() {
+  console.log("Olá, mundo!");
+}</code></pre>
+                    </div>
+    
+                    <div class="divider divider-list">
+                        <p><code>&lt;dfn&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;time&gt;</code>, <code>&lt;mark&gt;</code>: Dão significado contextual a palavras e frases.</p>
+                        <p><code>&lt;sub&gt;</code> e <code>&lt;sup&gt;</code>: Para fórmulas, notas de rodapé e expressões matemáticas.</p>
+                        <p><code>&lt;kbd&gt;</code>: Estiliza o texto para parecer uma tecla, indicando uma ação do usuário.</p>
+                        <p><code>&lt;code&gt;</code>: Para nomes de funções ou pequenos comandos.</p>
+                        <p><code>&lt;pre&gt;</code>: Essencial para exibir blocos de código sem que o navegador colapse os espaços.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="main-footer">
+      <p>Projeto de Estudo da Turma </p>
+    </footer>
   </body>
 </html>
